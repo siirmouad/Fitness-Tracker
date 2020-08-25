@@ -1,4 +1,4 @@
-# undefined
+# Fitness Workout Tracker
 
 ![last commit](https://img.shields.io/github/last-commit/siirmouad/Fitness-Trackr?style=flat-square) ![license badge](https://img.shields.io/github/license/siirmouad/Fitness-Trackr?style=flat-square)
 
