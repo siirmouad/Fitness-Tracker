@@ -3,9 +3,9 @@ const db = require("../models");
 
 router.get("/api/workouts", (req, res) => {
   db.Workouts.find({})
-    .then((dbWorkout) => {
-      console.log("heres your workout", dbWorkout);
-      res.json(dbWorkout);
+    .then((dbWorkouts) => {
+      console.log("heres your workout", dbWorkouts);
+      res.json(dbWorkouts);
     })
     .catch((err) => {
       res.json(err);
@@ -14,9 +14,9 @@ router.get("/api/workouts", (req, res) => {
 
 router.post("/api/workouts/", (req, res) => {
   db.Workouts.create(req.body)
-    .then((dbWorkout) => {
-      console.log("created new workout", dbWorkout);
-      res.json(dbWorkout);
+    .then((dbWorkouts) => {
+      console.log("created new workout", dbWorkouts);
+      res.json(dbWorkouts);
     })
     .then(function (_id) {
       console.log(_id);
@@ -32,8 +32,8 @@ router.put("/api/workouts/:id", function ({ body, params }, res) {
     { $push: { exercises: body } },
     { new: true, runValidators: true }
   )
-    .then((dbWorkout) => {
-      res.json(dbWorkout);
+    .then((dbWorkouts) => {
+      res.json(dbWorkouts);
     })
     .catch((err) => {
       res.json(err);
